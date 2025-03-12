@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CRUD de Tarefas</title>
+    <link rel="stylesheet" href="estilos/reset.css">
+    <link rel="stylesheet" href="estilos/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Login - CRUD de Tarefas</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Início</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="login-form">
+        <h2>Entrar</h2>
+        <form action="processar-login.php" method="POST">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" required>
+            
+            <button type="submit">Entrar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 CRUD de Tarefas</p>
+    </footer>
+</body>
+</html>
