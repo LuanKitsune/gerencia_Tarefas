@@ -2,11 +2,18 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const authRoutes = require('./routes/authRoutes');
+const chatRoutes = require('./routes/chatRoutes');
+const friendRoutes = require('./routes/friendRoutes');
+const notificationRoutes = require('./routes/notificationRoutes');
+const taskRoutes = require('./routes/taskRoutes');
+
 require('dotenv').config();
 
 const app = express();
 
-const allowedOrigins = ['http://localhost:3000', 'http://localhost:8081'];
+const allowedOrigins = 'default';
+
+// const allowedOrigins = ['http://localhost:3000', 'http://localhost:8081'];
 
 app.use(cors({
   origin: function (origin, callback) {
@@ -27,6 +34,11 @@ app.get('/', (req, res) => {
 });
 
 app.use('/auth', authRoutes);
+app.use('/chat', chatRoutes);
+app.use('/friend', friendRoutes);
+app.use('/notification', notificationRoutes);
+app.use('/task', taskRoutes);
+
 
 const dbURI = process.env.DB_URI;
 

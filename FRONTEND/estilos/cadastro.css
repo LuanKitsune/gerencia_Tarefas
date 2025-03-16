@@ -1,22 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+body {
+    background-color: #1a1a1a;
+    color: white;
+    font-family: 'Cinzel', serif;
+}
+
+.cadastro-form {
+    max-width: 450px;
+    margin: 60px auto;
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 10px;
+    border: 2px solid #ff66c4;
+    box-shadow: 0px 0px 20px #ff66c4;
+    text-align: center;
+}
+
+.cadastro-form h2 {
+    font-size: 24px;
+    color: #ff66c4;
+    margin-bottom: 20px;
+}
 
 form {
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
 }
 
-form label {
-    display: block;
-    margin-bottom: 8px;
+label {
+    font-size: 16px;
+    text-align: left;
+    margin-top: 10px;
 }
 
-form input {
-    width: 100%;
+input {
+    background: #222;
+    border: 2px solid #ff66c4;
+    color: white;
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #bb86fc;
+    box-shadow: 0px 0px 10px #bb86fc;
+}
+
+button {
+    background: #ff66c4;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #bb86fc;
+    box-shadow: 0px 0px 10px #bb86fc;
+}
+
+/* Animação de brilho para o formulário */
+@keyframes mystic-glow {
+    0% { box-shadow: 0px 0px 15px #ff66c4; }
+    50% { box-shadow: 0px 0px 30px #bb86fc; }
+    100% { box-shadow: 0px 0px 15px #ff66c4; }
+}
+
+.cadastro-form {
+    animation: mystic-glow 3s infinite alternate;
 }

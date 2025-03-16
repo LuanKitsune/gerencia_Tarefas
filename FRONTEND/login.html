@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - CRUD de Tarefas</title>
+    <title> Mago do Tempo</title>
     <link rel="stylesheet" href="estilos/reset.css">
     <link rel="stylesheet" href="estilos/styles.css">
+    <link rel="stylesheet" href="estilos/login.css">
 </head>
 <body>
     <header>
-        <h1>Login - CRUD de Tarefas</h1>
+        <h1> Mago do Tempo</h1>
         <nav>
             <ul>
                 <li><a href="home.html">Início</a></li>
@@ -19,7 +20,12 @@
     </header>
 
     <section class="login-form">
-        <h2>Entrar</h2>
+        <div class="clock-container">
+            <div class="clock">
+                <div class="hand"></div>
+            </div>
+        </div>
+        <h2>O Tempo Não Espera</h2>
         <form action="processar-login.php" method="POST">
             <label for="email">E-mail</label>
             <input type="email" id="email" name="email" required>
@@ -30,9 +36,9 @@
             <button type="submit">Entrar</button>
         </form>
     </section>
-
     <footer>
         <p>&copy; 2025 CRUD de Tarefas</p>
     </footer>
+    <script src="scripts/login.js"></script>
 </body>
 </html>

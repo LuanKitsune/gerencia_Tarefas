@@ -1,1 +1,78 @@
-ECHO est† ativado.
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+body {
+    background-color: #1a1a1a;
+    color: white;
+    font-family: 'Cinzel', serif;
+}
+
+.login-form {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    border: 2px solid #bb86fc;
+    box-shadow: 0px 0px 20px #bb86fc;
+    text-align: center;
+}
+
+.login-form h2 {
+    font-size: 24px;
+    color: #bb86fc;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 16px;
+    text-align: left;
+    margin-top: 10px;
+}
+
+input {
+    background: #222;
+    border: 2px solid #bb86fc;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #ff66c4;
+    box-shadow: 0px 0px 10px #ff66c4;
+}
+
+button {
+    background: #bb86fc;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff66c4;
+    box-shadow: 0px 0px 10px #ff66c4;
+}
+
+/* Efeito para dar um ar m√≠stico */
+@keyframes glow {
+    0% { box-shadow: 0px 0px 10px #bb86fc; }
+    50% { box-shadow: 0px 0px 20px #ff66c4; }
+    100% { box-shadow: 0px 0px 10px #bb86fc; }
+}
+
+.login-form {
+    animation: glow 2s infinite alternate;
+}

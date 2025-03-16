@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - CRUD de Tarefas</title>
+    <title>Mago do Tempo</title>
     <link rel="stylesheet" href="estilos/styles.css">
     <link rel="stylesheet" href="estilos/reset.css">
-
 </head>
 <body>
     <header>
-        <h1>CRUD de Tarefas</h1>
+        <h1>Mago do Tempo</h1>
         <nav>
             <ul>
                 <li><a href="home.html">Início</a></li>
@@ -20,13 +19,45 @@
         </nav>
     </header>
 
-    <div class="botton">
-        <a href="login.html"><button>Login</button></a>
-        <a href="cadastro.html"><button>Cadastro</button></a>
-    </div>
+    <main>
+        <section class="hero">
+            <div class="hourglass">
+                <img src="img/areia.gif">
+            </div>            
+            <div class="hero-content">
+                <h2>NÃO ESPERE A HORA, A HORA É AGORA</h2>
+                <p>Gerencie seu recurso mais precioso!</p>
+                <div class="hero-buttons">
+                    <a href="login.html" class="btn">Login</a>
+                    <a href="cadastro.html" class="btn btn-secondary">Cadastro</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Recursos Principais</h2>
+            <div class="feature-cards">
+                <div class="card">
+                    <div class="icon">📋</div>
+                    <h3>Gerenciamento de Tarefas</h3>
+                    <p>Crie, edite e exclua tarefas facilmente.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">⏰</div>
+                    <h3>Lembretes</h3>
+                    <p>Defina lembretes para suas tarefas importantes.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">📊</div>
+                    <h3>Relatórios</h3>
+                    <p>Visualize seu progresso com relatórios detalhados.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2025 CRUD de Tarefas</p>
+        <p>&copy; 2025 Mago do Tempo</p>
     </footer>
 </body>
 </html>

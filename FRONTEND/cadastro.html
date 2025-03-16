@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro - CRUD de Tarefas</title>
+    <title> Mago do Tempo</title>
     <link rel="stylesheet" href="estilos/styles.css">
     <link rel="stylesheet" href="estilos/reset.css">
     <link rel="stylesheet" href="estilos/cadastro.css">
@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <h1>Cadastro - CRUD de Tarefas</h1>
+        <h1> Mago do Tempo</h1>
         <nav>
             <ul>
                 <li><a href="home.html">Início</a></li>
@@ -21,20 +21,25 @@
     </header>
 
     <section class="cadastro-form">
-        <h2>Criar Conta</h2>
+        <div class="clock-container">
+            <div class="clock">
+                <div class="hand"></div>
+            </div>
+        </div>
+        <h2>Chega de Perder Tempo</h2>
         <form action="processar-cadastro.php" method="POST">
             <label for="nome">Nome</label>
             <input type="text" id="nome" name="nome" required>
-
+    
             <label for="email">E-mail</label>
             <input type="email" id="email" name="email" required>
-
+    
             <label for="senha">Senha</label>
             <input type="password" id="senha" name="senha" required>
-
+    
             <label for="confirmar-senha">Confirmar Senha</label>
             <input type="password" id="confirmar-senha" name="confirmar-senha" required>
-
+    
             <button type="submit">Cadastrar</button>
         </form>
     </section>
@@ -42,5 +47,6 @@
     <footer>
         <p>&copy; 2025 CRUD de Tarefas</p>
     </footer>
+    <script src="scripts/cadastro.js"></script>
 </body>
 </html>
