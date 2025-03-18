@@ -1,0 +1,217 @@
+body {
+    background: #121212;
+    color: #e0e0e0;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: #1e1e1e;
+    box-shadow: 0 0 15px #bb86fc;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: #bb86fc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.perfil-container {
+    position: absolute;
+    top: 10px;
+    right: 60px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.perfil-icone {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+}
+
+/* Menu do perfil */
+.perfil-menu {
+    display: none;
+    position: absolute;
+    top: 55px;
+    right: 0;
+    background: rgba(30, 30, 30, 0.9);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 180px;
+    z-index: 100;
+}
+
+.perfil-menu.show {
+    display: block;
+}
+
+.perfil-menu p {
+    text-align: center;
+    font-weight: bold;
+    color: #ff66c4;
+}
+
+.perfil-menu button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    background: #bb86fc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.perfil-menu button:hover {
+    background: #9c64ff;
+}
+
+/* Ícone de notificações */
+.notificacoes-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.notificacoes-icone {
+    width: 40px;
+    height: 40px;
+}
+
+#notificacaoNumero {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: red;
+    color: white;
+    font-size: 14px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Estilo do menu de notificações */
+.notificacoes-menu {
+    display: none;
+    position: absolute;
+    top: 55px;
+    right: 0;
+    background: rgba(30, 30, 30, 0.9);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 200px;
+    z-index: 100;
+}
+
+.notificacoes-menu.show {
+    display: block;
+}
+
+.notificacoes-menu p {
+    text-align: center;
+    color: white;
+}
+
+.notificacoes-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notificacoes-menu li {
+    padding: 8px;
+    background: #333;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    color: #e0e0e0;
+}
+
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.estatisticas, .tarefas, .amizades, .chat {
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #bb86fc;
+}
+
+h2 {
+    color: #ff66c4;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+button {
+    background: #bb86fc;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pendente {
+    color: #ffcc00;
+}
+
+.concluida {
+    color: #66ff99;
+}
+
+.chat-box {
+    background: #444;
+    padding: 10px;
+    height: 100px;
+    overflow-y: auto;
+}
+
+#mensagem {
+    width: 80%;
+    padding: 5px;
+}
+
+#enviarMensagem {
+    width: 15%;
+}
+

@@ -6,14 +6,15 @@ const chatRoutes = require('./routes/chatRoutes');
 const friendRoutes = require('./routes/friendRoutes');
 const notificationRoutes = require('./routes/notificationRoutes');
 const taskRoutes = require('./routes/taskRoutes');
+const userRoutes = require('./routes/userRoutes'); 
 
 require('dotenv').config();
 
 const app = express();
 
-const allowedOrigins = 'default';
+// const allowedOrigins = 'default';
 
-// const allowedOrigins = ['http://localhost:3000', 'http://localhost:8081'];
+const allowedOrigins = ['http://localhost:3000', 'http://localhost:8081', 'http://localhost:8000'];
 
 app.use(cors({
   origin: function (origin, callback) {
@@ -34,6 +35,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/auth', authRoutes);
+app.use('/user', userRoutes); 
 app.use('/chat', chatRoutes);
 app.use('/friend', friendRoutes);
 app.use('/notification', notificationRoutes);

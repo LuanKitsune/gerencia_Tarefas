@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lobby - Mago do Tempo</title>
+    <script src="scripts/verification.js" async></script>
+    <link rel="stylesheet" href="estilos/reset.css">
+    <link rel="stylesheet" href="estilos/styles.css">
+    <link rel="stylesheet" href="estilos/lobby.css">
+</head>
+<body>
+    <header>
+        <h1>Mago do Tempo</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Início</a></li>
+                <li><a href="amigos.html">Amigos</a></li>
+                <li><a href="chat.html">Chat</a></li>
+                <li><a href="configuracoes.html">Configurações</a></li>
+                <li><a href="logout.html">Sair</a></li>
+            </ul>
+        </nav>
+
+        <div class="perfil-container" onclick="togglePerfilMenu()">
+            <img src="img/avatar.png" alt="Perfil" class="perfil-icone">
+            <div class="perfil-menu" id="perfilMenu">
+                <p id="nomeUsuario">Usuário</p>
+                <button onclick="mudarAvatar()">Mudar Avatar</button>
+                <button onclick="window.location.href='perfil.html'">Ver Perfil</button>
+            </div>
+        </div>
+        
+        <div class="notificacoes-container" onclick="abrirNotificacoes()">
+            <span id="notificacaoNumero">0</span>
+            <img src="img/sino.png" alt="Notificações" class="notificacoes-icone">
+        </div>
+    </header>
+
+    <section class="dashboard">
+        <div class="estatisticas">
+            <h2>Minhas Estatísticas</h2>
+            <p>Tarefas Concluídas: <span id="tarefasConcluidas">0</span></p>
+            <p>Tarefas Pendentes: <span id="tarefasPendentes">0</span></p>
+            <p>Convites Recebidos: <span id="convitesRecebidos">0</span></p>
+            <p>Convites Enviados: <span id="convitesEnviados">0</span></p>
+        </div>
+
+        <div class="tarefas">
+            <h2>📜 Minhas Tarefas</h2>
+            <ul id="listaTarefas">
+                <li>Tarefa 1 - <span class="pendente">Pendente</span></li>
+                <li>Tarefa 2 - <span class="concluida">Concluída</span></li>
+            </ul>
+            <button onclick="window.location.href='adicionar-tarefa.html'">➕ Nova Tarefa</button>
+        </div>
+
+        <div class="amizades">
+            <h2>🧑‍🤝‍🧑 Amigos</h2>
+            <ul id="listaAmigos">
+                <li>Ana <button class="convidar">Convidar para Tarefa</button></li>
+                <li>Pedro <button class="convidar">Convidar para Tarefa</button></li>
+            </ul>
+        </div>
+
+        <div class="chat">
+            <h2>💬 Chat</h2>
+            <div class="chat-box">
+                <ul id="mensagensChat">
+                    <li>Ana: Vamos terminar aquela tarefa?</li>
+                    <li>Você: Sim! Vou enviar a prova.</li>
+                </ul>
+            </div>
+            <input type="text" id="mensagem" placeholder="Digite uma mensagem...">
+            <button id="enviarMensagem">Enviar</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mago do Tempo</p>
+    </footer>
+    <script type="module" src="scripts/lobby.js"></script>
+</body>
+</html>

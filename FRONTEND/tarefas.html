@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas - Mago do Tempo</title>
+    <link rel="stylesheet" href="estilos/reset.css">
+    <link rel="stylesheet" href="estilos/styles.css">
+    <link rel="stylesheet" href="estilos/tarefas.css">
+</head>
+<body>
+    <header>
+        <h1>📜 Minhas Tarefas</h1>
+        <button id="novaTarefaBtn">➕ Nova Tarefa</button>
+    </header>
+    
+    <section class="dashboard">
+        <div class="tarefas-pendentes">
+            <h2>⏳ Pendentes</h2>
+            <ul id="pendentesLista"></ul>
+        </div>
+        <div class="tarefas-andamento">
+            <h2>🔄 Em Andamento</h2>
+            <ul id="andamentoLista"></ul>
+        </div>
+        <div class="tarefas-concluidas">
+            <h2>✅ Concluídas</h2>
+            <ul id="concluidasLista"></ul>
+        </div>
+    </section>
+
+    <section class="tarefas-publicas">
+        <h2>🌍 Tarefas Públicas</h2>
+        <ul id="publicasLista"></ul>
+        <button id="pedirParticipacao">📩 Pedir Participação</button>
+    </section>
+    
+    <section class="convites">
+        <h2>📩 Convites</h2>
+        <ul id="convitesLista"></ul>
+    </section>
+
+    <section class="chat-tarefa">
+        <h2>💬 Chat da Tarefa</h2>
+        <ul id="chatLista"></ul>
+        <input type="text" id="mensagemChat" placeholder="Digite sua mensagem...">
+        <button id="enviarMensagem">Enviar</button>
+    </section>
+
+    <div id="modalNovaTarefa" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Criar Nova Tarefa</h2>
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo">
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao"></textarea>
+            <label for="prazo">Prazo:</label>
+            <input type="date" id="prazo">
+            <label for="privacidade">Privacidade:</label>
+            <select id="privacidade">
+                <option value="individual">Individual</option>
+                <option value="amigos">Apenas Amigos</option>
+                <option value="publico">Pública</option>
+            </select>
+            <label for="provaTexto">Prova Escrita:</label>
+            <textarea id="provaTexto"></textarea>
+            <label for="provaImagem">Prova em Imagem:</label>
+            <input type="file" id="provaImagem">
+            <button id="salvarTarefa">Salvar</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mago do Tempo</p>
+    </footer>
+    
+    <script src="scripts/tarefas.js"></script>
+</body>
+</html>
